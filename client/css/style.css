@@ -1,0 +1,133 @@
+/*Header*/
+header{
+    background-color: var(--primary-color);
+    position: sticky;
+    top:0;
+    z-index: 100;
+    width: 100%;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+nav h1{
+    color: var(--secondary-color);
+    font-size: var(--font-size-heading);
+    cursor: pointer;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    gap: 32px;
+}
+
+nav ul li a{
+    color: var(--background-color);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: var(--font-size-base);
+    transition:color 0.2s ease;
+}
+
+nav ul li a:hover{
+    color: var(--secondary-color);
+}
+
+.page-wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+/*Main Body*/
+/* Hero */
+main {
+    flex: 1;        
+}
+
+/*Footer*/
+footer{
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    max-width: 100%;
+}
+
+.footer-container{
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap:30px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding:50px 30px;
+}
+
+.footer-col h2{
+    color:var(--secondary-color);
+    font-size: var(--font-size-large);
+    margin-bottom: 12px;
+}
+
+.footer-col h4{
+    color:var(--secondary-color);
+    font-size: var(--font-size-base);
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer-col p{
+    font-size: var(--font-size-small);
+    color: var(--tertiary-color);
+    line-height: 1.6;
+}
+
+.footer-col ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap:5px;
+}
+
+.footer-col ul li a{
+    text-decoration: none;
+    color: var(--background-color);
+    font-size: var(--font-size-small);
+    transition: color 0.2s ease;
+}
+
+.footer-col ul li a:hover{
+    color: var(--secondary-color);
+}
+
+.footer-bottom{
+    font-size: var(--font-size-small);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    margin: 0 auto;
+    padding:10px 30px;
+    color: var(--tertiary-color);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-bottom-links{
+    display: flex;
+    gap:20px;
+}
+
+.footer-bottom-links a{
+    text-decoration: none;
+    transition: color 0.2s ease;
+    color: var(--tertiary-color);
+}
+
+.footer-bottom-links a:hover{
+    color: var(--secondary-color);
+}
