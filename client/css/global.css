@@ -1,12 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-:root{
-    --text-color:#000000;
-    --primary-color:#14213D;
-    --secondary-color:#FCA311;
-    --tertiary-color:#E5E5E5;
-    --background-color:#FFFFFF;
-    --font-main: 'Inter', sans-serif;
 
+:root {
+    /* Colors */
+    --black: #000000;
+    --white: #ffffff;
+    --gray-light: #f3f4f6;
+    --gray-mid: #e5e7eb;
+    --gray-dark: #374151;
+    --text-muted: #6b7280;
+
+    /* Shared utilities */
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --container-max: 1280px;
+
+    /* Typography */
+    --font-main: 'Inter', sans-serif;
     --font-size-small: 14px;
     --font-size-base: 16px;
     --font-size-large: 20px;
@@ -14,15 +22,19 @@
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: var(--font-main);
-  color: var(--text-color);
-  background: var(--background-color);
-  font-size: var(--font-size-base);
-  line-height:1.5;
+    font-family: var(--font-main);
+    color: var(--text-color);      /* ← use semantic name */
+    background: var(--white);
+    font-size: var(--font-size-base);
+    line-height: 1.5;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
