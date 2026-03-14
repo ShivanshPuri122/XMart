@@ -2,11 +2,12 @@
    HEADER
 ================================ */
 header {
-    background-color: var(--white);
-    position: sticky;
+    position: fixed;      /* always sticks, no exceptions */
     top: 0;
-    z-index: 100;
+    left: 0;
     width: 100%;
+    z-index: 100;
+    background-color: var(--white);
     border-bottom: 1px solid var(--gray-mid);
 }
 
@@ -65,6 +66,7 @@ nav ul li a:hover {
 ================================ */
 main {
     flex: 1;
+    padding-top: 73px
 }
 
 /* ================================
@@ -251,4 +253,6 @@ footer {
 .footer-bottom-links a:hover {
     color: var(--black);
 }
+
+
 
