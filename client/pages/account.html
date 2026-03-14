@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account — XMart</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/account.css">
+</head>
+
+<body>
+    <div class="page-wrapper">
+
+        <header>
+            <nav>
+                <h1>XMart</h1>
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./products.html">Category</a></li>
+                    <li><a href="./account.html">Account</a></li>
+                    <li><a href="./cart.html">Cart</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+
+            <!-- Page Header -->
+            <div class="page-header">
+                <div class="container">
+                    <h1>My Account</h1>
+                    <p>Welcome back, John Doe</p>
+                </div>
+            </div>
+
+            <section class="account-section">
+                <div class="container">
+                    <div class="account-layout">
+
+                        <!-- LEFT — Sidebar -->
+                        <aside class="account-sidebar">
+                            <div class="account-avatar">
+                                <div class="avatar-circle">JD</div>
+                                <div class="avatar-info">
+                                    <p class="avatar-name">John Doe</p>
+                                    <p class="avatar-email">john@email.com</p>
+                                </div>
+                            </div>
+                            <nav class="account-nav">
+                                <a href="#profile" class="account-nav-item active">
+                                    <span>👤</span> Profile
+                                </a>
+                                <a href="#orders" class="account-nav-item">
+                                    <span>📦</span> My Orders
+                                </a>
+                                <a href="#addresses" class="account-nav-item">
+                                    <span>📍</span> Addresses
+                                </a>
+                                <a href="#security" class="account-nav-item">
+                                    <span>🔒</span> Security
+                                </a>
+                                <a href="#wishlist" class="account-nav-item">
+                                    <span>❤️</span> Wishlist
+                                </a>
+                                <a href="./login.html" class="account-nav-item logout">
+                                    <span>🚪</span> Logout
+                                </a>
+                            </nav>
+                        </aside>
+
+                        <!-- RIGHT — Content -->
+                        <div class="account-content">
+
+                            <!-- Profile Section -->
+                            <div class="content-block" id="profile">
+                                <h2>Profile Details</h2>
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="fname">First Name</label>
+                                        <input type="text" id="fname" value="John" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="lname">Last Name</label>
+                                        <input type="text" id="lname" value="Doe" />
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="username">Username</label>
+                                    <input type="text" id="username" value="johndoe123" />
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" value="john@email.com" />
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="phone">Phone</label>
+                                    <input type="tel" id="phone" value="+91 98765 43210" />
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="dob">Date of Birth</label>
+                                    <input type="date" id="dob" value="1998-05-15" />
+                                </div>
+
+                                <button class="btn-save">Save Changes</button>
+                            </div>
+
+                            <!-- Orders Section -->
+                            <div class="content-block" id="orders">
+                                <h2>My Orders</h2>
+
+                                <div class="orders-table">
+
+                                    <div class="orders-table-header">
+                                        <span>Order ID</span>
+                                        <span>Date</span>
+                                        <span>Items</span>
+                                        <span>Total</span>
+                                        <span>Status</span>
+                                        <span></span>
+                                    </div>
+
+                                    <div class="order-row">
+                                        <span class="order-id">#XM-10234</span>
+                                        <span class="order-date">12 Mar 2026</span>
+                                        <span class="order-items">3 items</span>
+                                        <span class="order-total">₹6,296</span>
+                                        <span class="order-status delivered">Delivered</span>
+                                        <a href="#" class="order-view">View</a>
+                                    </div>
+
+                                    <div class="order-row">
+                                        <span class="order-id">#XM-10198</span>
+                                        <span class="order-date">28 Feb 2026</span>
+                                        <span class="order-items">1 item</span>
+                                        <span class="order-total">₹2,999</span>
+                                        <span class="order-status shipped">Shipped</span>
+                                        <a href="#" class="order-view">View</a>
+                                    </div>
+
+                                    <div class="order-row">
+                                        <span class="order-id">#XM-10145</span>
+                                        <span class="order-date">10 Feb 2026</span>
+                                        <span class="order-items">2 items</span>
+                                        <span class="order-total">₹3,798</span>
+                                        <span class="order-status processing">Processing</span>
+                                        <a href="#" class="order-view">View</a>
+                                    </div>
+
+                                    <div class="order-row">
+                                        <span class="order-id">#XM-10089</span>
+                                        <span class="order-date">01 Jan 2026</span>
+                                        <span class="order-items">4 items</span>
+                                        <span class="order-total">₹8,450</span>
+                                        <span class="order-status cancelled">Cancelled</span>
+                                        <a href="#" class="order-view">View</a>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <!-- Addresses Section -->
+                            <div class="content-block" id="addresses">
+                                <h2>My Addresses</h2>
+
+                                <div class="addresses-grid">
+
+                                    <div class="address-card default">
+                                        <div class="address-card-header">
+                                            <span class="address-type">Home</span>
+                                            <span class="default-badge">Default</span>
+                                        </div>
+                                        <p class="address-name">John Doe</p>
+                                        <p class="address-text">
+                                            123, Main Street, Andheri West,
+                                            Mumbai, Maharashtra — 400053
+                                        </p>
+                                        <p class="address-phone">+91 98765 43210</p>
+                                        <div class="address-actions">
+                                            <button class="btn-edit-address">Edit</button>
+                                            <button class="btn-delete-address">Delete</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="address-card">
+                                        <div class="address-card-header">
+                                            <span class="address-type">Work</span>
+                                        </div>
+                                        <p class="address-name">John Doe</p>
+                                        <p class="address-text">
+                                            456, Business Park, Powai,
+                                            Mumbai, Maharashtra — 400076
+                                        </p>
+                                        <p class="address-phone">+91 98765 43210</p>
+                                        <div class="address-actions">
+                                            <button class="btn-edit-address">Edit</button>
+                                            <button class="btn-delete-address">Delete</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="address-card add-new">
+                                        <span>+</span>
+                                        <p>Add New Address</p>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <!-- Security Section -->
+                            <div class="content-block" id="security">
+                                <h2>Security</h2>
+
+                                <div class="security-block">
+                                    <h3>Change Password</h3>
+                                    <div class="form-group">
+                                        <label for="current-password">Current Password</label>
+                                        <input type="password" id="current-password" placeholder="••••••••" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="new-password">New Password</label>
+                                        <input type="password" id="new-password" placeholder="••••••••" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="confirm-password">Confirm New Password</label>
+                                        <input type="password" id="confirm-password" placeholder="••••••••" />
+                                    </div>
+                                    <button class="btn-save">Update Password</button>
+                                </div>
+
+                            </div>
+
+                            <!-- Wishlist Section -->
+                            <div class="content-block" id="wishlist">
+                                <h2>My Wishlist</h2>
+                                <div class="product-grid">
+
+                                    <article class="product-card">
+                                        <img src="https://placehold.co/400x220/f3f4f6/9ca3af?text=Product"
+                                            alt="Product 1" />
+                                        <div class="product-info">
+                                            <h3>Wireless Headphones</h3>
+                                            <p class="product-price">₹2,999</p>
+                                            <button class="add-to-cart">Add to Cart</button>
+                                        </div>
+                                    </article>
+
+                                    <article class="product-card">
+                                        <img src="https://placehold.co/400x220/f3f4f6/9ca3af?text=Product"
+                                            alt="Product 2" />
+                                        <div class="product-info">
+                                            <h3>Running Shoes</h3>
+                                            <p class="product-price">₹1,499</p>
+                                            <button class="add-to-cart">Add to Cart</button>
+                                        </div>
+                                    </article>
+
+                                    <article class="product-card">
+                                        <img src="https://placehold.co/400x220/f3f4f6/9ca3af?text=Product"
+                                            alt="Product 3" />
+                                        <div class="product-info">
+                                            <h3>Leather Wallet</h3>
+                                            <p class="product-price">₹799</p>
+                                            <button class="add-to-cart">Add to Cart</button>
+                                        </div>
+                                    </article>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer>
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h2>XMart</h2>
+                    <p>Your one stop shop for everything you need, delivered fast.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Shop</h4>
+                    <ul>
+                        <li><a href="#">All Products</a></li>
+                        <li><a href="#">Categories</a></li>
+                        <li><a href="#">New Arrivals</a></li>
+                        <li><a href="#">Sale</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Help</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Track Order</a></li>
+                        <li><a href="#">Return Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <ul>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Twitter / X</a></li>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">YouTube</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 XMart. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+</body>
+
+</html>

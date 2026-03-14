@@ -1,0 +1,273 @@
+/* ================================
+   PRODUCTS PAGE LAYOUT
+================================ */
+.products-page {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 32px;
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: 40px;
+    align-items: start;
+}
+
+/* ================================
+   FILTER SIDEBAR
+================================ */
+.filters {
+    background-color: var(--white);
+    border: 1px solid var(--gray-mid);
+    border-radius: 4px;
+    padding: 28px;
+    position: sticky;
+    top: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.filters h2 {
+    color: var(--black);
+    font-size: var(--font-size-small);
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--gray-mid);
+}
+
+/* ================================
+   FILTER GROUPS
+================================ */
+.filter-group {
+    margin-bottom: 24px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--gray-mid);
+}
+
+.filter-group:last-of-type {
+    border-bottom: none;
+    margin-bottom: 20px;
+    padding-bottom: 0;
+}
+
+.filter-group h3 {
+    color: var(--black);
+    font-size: var(--font-size-small);
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+}
+
+/* ================================
+   CHECKBOXES
+================================ */
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.checkbox-item input[type="checkbox"] {
+    width: 15px;
+    height: 15px;
+    accent-color: var(--black);
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.checkbox-item label {
+    color: var(--gray-dark);
+    font-size: var(--font-size-small);
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    text-transform: none;
+    cursor: pointer;
+}
+
+/* ================================
+   PRICE RANGE
+================================ */
+.price-range {
+    display: flex;
+    gap: 12px;
+}
+
+.min-price,
+.max-price {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    flex: 1;
+}
+
+.min-price label,
+.max-price label {
+    font-size: var(--font-size-small);
+    font-weight: 600;
+    color: var(--black);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.min-price input,
+.max-price input {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid var(--gray-mid);
+    border-radius: 2px;
+    font-size: var(--font-size-small);
+    font-family: var(--font-main);
+    outline: none;
+    color: var(--black);
+    transition: var(--transition);
+}
+
+.min-price input:focus,
+.max-price input:focus {
+    border-color: var(--black);
+}
+
+/* ================================
+   RATING
+================================ */
+.rating-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.rating-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.rating-item input[type="radio"] {
+    width: 15px;
+    height: 15px;
+    accent-color: var(--black);
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.rating-item label {
+    font-size: var(--font-size-small);
+    font-weight: 500;
+    color: var(--gray-dark);
+    text-transform: none;
+    letter-spacing: 0;
+    cursor: pointer;
+}
+
+/* ================================
+   APPLY FILTERS BUTTON
+================================ */
+.btn-apply-filters {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--black);
+    color: var(--white);
+    border: none;
+    border-radius: 2px;
+    font-size: var(--font-size-small);
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-family: var(--font-main);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn-apply-filters:hover {
+    background-color: var(--gray-dark);
+    
+}
+
+/* ================================
+   PRODUCTS TOPBAR
+================================ */
+.products-topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--gray-mid);
+}
+
+.results-count {
+    color: var(--text-muted);
+    font-size: var(--font-size-small);
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.results-count span {
+    color: var(--black);
+    font-weight: 700;
+}
+
+/* ================================
+   SORT DROPDOWN
+================================ */
+.sort-wrap {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.sort-wrap label {
+    font-size: var(--font-size-small);
+    font-weight: 600;
+    color: var(--black);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.sort-wrap select {
+    padding: 8px 12px;
+    border: 1px solid var(--gray-mid);
+    border-radius: 2px;
+    font-size: var(--font-size-small);
+    font-family: var(--font-main);
+    color: var(--black);
+    background-color: var(--white);
+    cursor: pointer;
+    outline: none;
+    transition: var(--transition);
+}
+
+.sort-wrap select:focus {
+    border-color: var(--black);
+}
+
+/* ================================
+   PRODUCT GRID
+================================ */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* ================================
+   LOAD MORE
+================================ */
+.load-more-wrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}

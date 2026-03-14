@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products — XMart</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/products.css">
+</head>
+
+<body>
+    <div class="page-wrapper">
+
+        <header>
+            <nav>
+                <h1>XMart</h1>
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./products.html">Category</a></li>
+                    <li><a href="./account.html">Account</a></li>
+                    <li><a href="./cart.html">Cart</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <div class="products-page">
+
+                <aside class="filters">
+                    <h2>Filters</h2>
+
+                    <div class="filter-group">
+                        <h3>Category</h3>
+                        <div class="checkbox-group">
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="electronics" name="category" value="electronics" />
+                                <label for="electronics">Electronics</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="clothing" name="category" value="clothing" />
+                                <label for="clothing">Clothing</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="books" name="category" value="books" />
+                                <label for="books">Books</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="sports" name="category" value="sports" />
+                                <label for="sports">Sports</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="home-kitchen" name="category" value="home-kitchen" />
+                                <label for="home-kitchen">Home & Kitchen</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="beauty" name="category" value="beauty" />
+                                <label for="beauty">Beauty</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <h3>Price</h3>
+                        <div class="price-range">
+                            <div class="min-price">
+                                <label for="min-price">Min</label>
+                                <input type="number" id="min-price" name="min-price" min="0" placeholder="₹0" />
+                            </div>
+                            <div class="max-price">
+                                <label for="max-price">Max</label>
+                                <input type="number" id="max-price" name="max-price" min="0" placeholder="₹10,000" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <h3>Rating</h3>
+                        <div class="rating-group">
+                            <div class="rating-item">
+                                <input type="radio" id="rating5" name="rating" value="5" />
+                                <label for="rating5">⭐⭐⭐⭐⭐</label>
+                            </div>
+                            <div class="rating-item">
+                                <input type="radio" id="rating4" name="rating" value="4" />
+                                <label for="rating4">⭐⭐⭐⭐ & up</label>
+                            </div>
+                            <div class="rating-item">
+                                <input type="radio" id="rating3" name="rating" value="3" />
+                                <label for="rating3">⭐⭐⭐ & up</label>
+                            </div>
+                            <div class="rating-item">
+                                <input type="radio" id="rating2" name="rating" value="2" />
+                                <label for="rating2">⭐⭐ & up</label>
+                            </div>
+                            <div class="rating-item">
+                                <input type="radio" id="rating1" name="rating" value="1" />
+                                <label for="rating1">⭐ & up</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn-apply-filters">Apply Filters</button>
+
+                </aside>
+
+                <section class="products-section">
+
+                    <div class="products-topbar">
+                        <p class="results-count">
+                            Showing <span>8</span> products
+                        </p>
+                        <div class="sort-wrap">
+                            <label for="sort">Sort by</label>
+                            <select id="sort" name="sort">
+                                <option value="latest">Latest</option>
+                                <option value="price-low">Price: Low to High</option>
+                                <option value="price-high">Price: High to Low</option>
+                                <option value="rating">Top Rated</option>
+                                <option value="popular">Most Popular</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="product-grid" id="productsGrid">
+
+                        <article class="product-card">
+                            <img src="https://placehold.co/400x220/f3f4f6/9ca3af?text=Product" alt="Product 1" />
+                            <div class="product-info">
+                                <h3>Product Name</h3>
+                                <p class="product-price">₹999</p>
+                                <button class="add-to-cart">Add to Cart</button>
+                            </div>
+                        </article>
+
+                        <article class="product-card">
+                            <img src="https://placehold.co/400x220/f3f4f6/9ca3af?text=Product" alt="Product 2" />
+                            <div class="product-info">
+                                <h3>Product Name</h3>
+                                <p class="product-price">₹1,499</p>
+                                <button class="add-to-cart">Add to Cart</button>
+                            </div>
+                        </article>
+
+                        <article class="product-card">
+                            <img src="https://placehold.co/400x220/f3f4f6/9ca3af?text=Product" alt="Product 3" />
+                            <div class="product-info">
+                                <h3>Product Name</h3>
+                                <p class="product-price">₹2,999</p>
+                                <button class="add-to-cart">Add to Cart</button>
+                            </div>
+                        </article>
+
+                        <article class="product-card">
+                            <img src="https://placehold.co/400x220/f3f4f6/9ca3af?text=Product" alt="Product 4" />
+                            <div class="product-info">
+                                <h3>Product Name</h3>
+                                <p class="product-price">₹599</p>
+                                <button class="add-to-cart">Add to Cart</button>
+                            </div>
+                        </article>
+
+                        <article class="product-card">
+                            <img src="https://placehold.co/400x220/f3f4f6/9ca3af?text=Product" alt="Product 5" />
+                            <div class="product-info">
+                                <h3>Product Name</h3>
+                                <p class="product-price">₹3,499</p>
+                                <button class="add-to-cart">Add to Cart</button>
+                            </div>
+                        </article>
+
+                        <article class="product-card">
+                            <img src="https://placehold.co/400x220/f3f4f6/9ca3af?text=Product" alt="Product 6" />
+                            <div class="product-info">
+                                <h3>Product Name</h3>
+                                <p class="product-price">₹799</p>
+                                <button class="add-to-cart">Add to Cart</button>
+                            </div>
+                        </article>
+
+                        <article class="product-card">
+                            <img src="https://placehold.co/400x220/f3f4f6/9ca3af?text=Product" alt="Product 7" />
+                            <div class="product-info">
+                                <h3>Product Name</h3>
+                                <p class="product-price">₹1,299</p>
+                                <button class="add-to-cart">Add to Cart</button>
+                            </div>
+                        </article>
+
+                        <article class="product-card">
+                            <img src="https://placehold.co/400x220/f3f4f6/9ca3af?text=Product" alt="Product 8" />
+                            <div class="product-info">
+                                <h3>Product Name</h3>
+                                <p class="product-price">₹4,999</p>
+                                <button class="add-to-cart">Add to Cart</button>
+                            </div>
+                        </article>
+
+                    </div>
+
+                    <div class="load-more-wrap">
+                        <button class="btn-load-more" id="loadMoreBtn" disabled>
+                            Load More
+                        </button>
+                    </div>
+
+                </section>
+
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h2>XMart</h2>
+                    <p>Your one stop shop for everything you need, delivered fast.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Shop</h4>
+                    <ul>
+                        <li><a href="#">All Products</a></li>
+                        <li><a href="#">Categories</a></li>
+                        <li><a href="#">New Arrivals</a></li>
+                        <li><a href="#">Sale</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Help</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Track Order</a></li>
+                        <li><a href="#">Return Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <ul>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Twitter / X</a></li>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">YouTube</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 XMart. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+</body>
+
+</html>

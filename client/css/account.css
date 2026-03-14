@@ -1,0 +1,546 @@
+/* ================================
+   CONTAINER
+================================ */
+.container {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+/* ================================
+   PAGE HEADER
+================================ */
+.page-header {
+    padding: 40px 0 32px;
+    border-bottom: 1px solid var(--gray-mid);
+}
+
+.page-header h1 {
+    font-size: var(--font-size-heading);
+    font-weight: 800;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+    color: var(--black);
+    margin-bottom: 4px;
+}
+
+.page-header p {
+    font-size: var(--font-size-small);
+    color: var(--text-muted);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+/* ================================
+   ACCOUNT LAYOUT
+================================ */
+.account-section {
+    padding: 48px 0;
+}
+
+.account-layout {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 48px;
+    align-items: start;
+}
+
+/* ================================
+   SIDEBAR
+================================ */
+.account-sidebar {
+    position: sticky;
+    top: 80px;
+    border: 1px solid var(--gray-mid);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.account-avatar {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 24px;
+    background-color: var(--gray-light);
+    border-bottom: 1px solid var(--gray-mid);
+}
+
+.avatar-circle {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: var(--black);
+    color: var(--white);
+    font-size: var(--font-size-base);
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    letter-spacing: 1px;
+}
+
+.avatar-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    overflow: hidden;
+}
+
+.avatar-name {
+    font-size: var(--font-size-base);
+    font-weight: 700;
+    color: var(--black);
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.avatar-email {
+    font-size: var(--font-size-small);
+    color: var(--text-muted);
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* ================================
+   ACCOUNT NAV
+================================ */
+.account-nav {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--white);
+}
+
+.account-nav-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 24px;
+    font-size: var(--font-size-small);
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--gray-dark);
+    text-decoration: none;
+    border-bottom: 1px solid var(--gray-mid);
+    transition: var(--transition);
+}
+
+.account-nav-item:last-child {
+    border-bottom: none;
+}
+
+.account-nav-item:hover {
+    background-color: var(--gray-light);
+    color: var(--black);
+}
+
+.account-nav-item.active {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.account-nav-item.logout {
+    color: var(--text-muted);
+    margin-top: auto;
+}
+
+.account-nav-item.logout:hover {
+    background-color: var(--gray-light);
+    color: var(--black);
+}
+
+/* ================================
+   CONTENT BLOCKS
+================================ */
+.account-content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.content-block {
+    border: 1px solid var(--gray-mid);
+    border-radius: 4px;
+    padding: 32px;
+    background-color: var(--white);
+}
+
+.content-block h2 {
+    font-size: var(--font-size-small);
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--black);
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--gray-mid);
+}
+
+/* ================================
+   FORM GROUPS
+================================ */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 16px;
+}
+
+.form-group:last-of-type {
+    margin-bottom: 0;
+}
+
+.form-row {
+    display: flex;
+    gap: 16px;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+.content-block label {
+    font-size: var(--font-size-small);
+    font-weight: 600;
+    color: var(--black);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.content-block input {
+    padding: 12px 16px;
+    border: 1.5px solid var(--gray-mid);
+    border-radius: 2px;
+    font-size: var(--font-size-base);
+    font-family: var(--font-main);
+    outline: none;
+    width: 100%;
+    color: var(--black);
+    background-color: var(--white);
+    transition: var(--transition);
+}
+
+.content-block input:focus {
+    border-color: var(--black);
+}
+
+.content-block input::placeholder {
+    color: var(--text-muted);
+}
+
+/* ================================
+   SAVE BUTTON
+================================ */
+.btn-save {
+    margin-top: 20px;
+    padding: 12px 32px;
+    background-color: var(--black);
+    color: var(--white);
+    border: none;
+    border-radius: 2px;
+    font-size: var(--font-size-small);
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-family: var(--font-main);
+    cursor: pointer;
+    transition: var(--transition);
+    width: fit-content;
+}
+
+.btn-save:hover {
+    background-color: var(--gray-dark);
+}
+
+/* ================================
+   ORDERS TABLE
+================================ */
+.orders-table {
+    display: flex;
+    flex-direction: column;
+}
+
+.orders-table-header {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 0.8fr 1fr 1fr 0.5fr;
+    padding: 0 0 12px 0;
+    border-bottom: 2px solid var(--black);
+    margin-bottom: 4px;
+}
+
+.orders-table-header span {
+    font-size: var(--font-size-small);
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--black);
+}
+
+.order-row {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 0.8fr 1fr 1fr 0.5fr;
+    align-items: center;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--gray-mid);
+    transition: var(--transition);
+}
+
+.order-row:last-child {
+    border-bottom: none;
+}
+
+.order-row:hover {
+    background-color: var(--gray-light);
+    padding-left: 8px;
+}
+
+.order-id {
+    font-size: var(--font-size-small);
+    font-weight: 700;
+    color: var(--black);
+    letter-spacing: 0.5px;
+}
+
+.order-date,
+.order-items {
+    font-size: var(--font-size-small);
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+.order-total {
+    font-size: var(--font-size-small);
+    font-weight: 700;
+    color: var(--black);
+}
+
+.order-status {
+    font-size: var(--font-size-small);
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 2px;
+    width: fit-content;
+}
+
+.order-status.delivered {
+    background-color: #dcfce7;
+    color: #16a34a;
+}
+
+.order-status.shipped {
+    background-color: #dbeafe;
+    color: #2563eb;
+}
+
+.order-status.processing {
+    background-color: #fef9c3;
+    color: #ca8a04;
+}
+
+.order-status.cancelled {
+    background-color: #fee2e2;
+    color: #dc2626;
+}
+
+.order-view {
+    font-size: var(--font-size-small);
+    font-weight: 600;
+    color: var(--black);
+    text-decoration: none;
+    border-bottom: 1px solid var(--black);
+    padding-bottom: 1px;
+    width: fit-content;
+    transition: var(--transition);
+}
+
+.order-view:hover {
+    color: var(--gray-dark);
+    border-bottom-color: var(--gray-dark);
+}
+
+/* ================================
+   ADDRESSES
+================================ */
+.addresses-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.address-card {
+    border: 1.5px solid var(--gray-mid);
+    border-radius: 4px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    transition: var(--transition);
+}
+
+.address-card.default {
+    border-color: var(--black);
+}
+
+.address-card:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+}
+
+.address-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 4px;
+}
+
+.address-type {
+    font-size: var(--font-size-small);
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--black);
+}
+
+.default-badge {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background-color: var(--black);
+    color: var(--white);
+    padding: 2px 8px;
+    border-radius: 2px;
+}
+
+.address-name {
+    font-size: var(--font-size-small);
+    font-weight: 700;
+    color: var(--black);
+}
+
+.address-text {
+    font-size: var(--font-size-small);
+    color: var(--gray-dark);
+    line-height: 1.6;
+    font-weight: 500;
+}
+
+.address-phone {
+    font-size: var(--font-size-small);
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+.address-actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.btn-edit-address {
+    padding: 6px 16px;
+    background-color: var(--white);
+    color: var(--black);
+    border: 1.5px solid var(--black);
+    border-radius: 2px;
+    font-size: var(--font-size-small);
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-family: var(--font-main);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn-edit-address:hover {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.btn-delete-address {
+    padding: 6px 16px;
+    background-color: transparent;
+    color: var(--text-muted);
+    border: 1.5px solid var(--gray-mid);
+    border-radius: 2px;
+    font-size: var(--font-size-small);
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-family: var(--font-main);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn-delete-address:hover {
+    background-color: #fee2e2;
+    color: #dc2626;
+    border-color: #dc2626;
+}
+
+.address-card.add-new {
+    border-style: dashed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+    min-height: 160px;
+    color: var(--text-muted);
+    transition: var(--transition);
+}
+
+.address-card.add-new span {
+    font-size: 32px;
+    font-weight: 300;
+    line-height: 1;
+    color: var(--gray-mid);
+}
+
+.address-card.add-new p {
+    font-size: var(--font-size-small);
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+}
+
+.address-card.add-new:hover {
+    border-color: var(--black);
+    color: var(--black);
+}
+
+.address-card.add-new:hover span,
+.address-card.add-new:hover p {
+    color: var(--black);
+}
+
+/* ================================
+   SECURITY
+================================ */
+.security-block h3 {
+    font-size: var(--font-size-small);
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--black);
+    margin-bottom: 20px;
+}
+
+/* ================================
+   WISHLIST GRID
+================================ */
+.content-block .product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
