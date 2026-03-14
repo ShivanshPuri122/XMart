@@ -109,7 +109,6 @@
     letter-spacing: 3px;
     text-transform: uppercase;
     margin-bottom: 32px;
-    /* small uppercase label style — very modern */
 }
 
 .category-grid {
@@ -126,15 +125,12 @@
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    /* clips image to card border radius */
 }
 
 .category-card img {
     width: 100%;
     height: 140px;
-    /* fixed height — all cards same size */
     object-fit: cover;
-    /* crops image neatly */
     transition: var(--transition);
 }
 
