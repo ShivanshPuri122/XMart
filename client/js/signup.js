@@ -1,59 +1,142 @@
-/*Variable for Form*/
-const signupForm=document.querySelector(".signup-box");
+const COLORS = {
+    errorColor: "#dc2626",
+    successColor: "#16a34a",
+    grayMid: "#e5e7eb",
+};
 
-/*Variable for User Detail*/
-const fnameInput=document.querySelector("#fname");
-const mnameInput=document.querySelector("#mname");
-const lnameInput= document.querySelector('#lname');
-const usernameInput= document.querySelector("#username");
-const emailInput= document.querySelector("#email");
-const passwordInput= document.querySelector("#password");
-const confirmPasswordInput= document.querySelector("#confirmpassword");
-const dobInput= document.querySelector("#dob");
+/* Variable for Form */
+const signupForm = document.querySelector(".signup-box");
 
+/* Variables for Inputs */
+const fnameInput = document.querySelector("#fname");
+const mnameInput = document.querySelector("#mname");
+const lnameInput = document.querySelector("#lname");
+const usernameInput = document.querySelector("#username");
+const emailInput = document.querySelector("#email");
+const passwordInput = document.querySelector("#password");
+const confirmPasswordInput = document.querySelector("#confirmpassword");
+const dobInput = document.querySelector("#dob");
 
-signupForm.addEventListener("submit",function(event){
-    event.preventDefault();
+/*======================
+Real Time validation
+========================*/
+/* Validate Name */
+function addNameListener(input){
+    input.addEventListener("input",function(){
+        const name= input.value.trim();
 
-    /*Initializing Variables */
-    const fname= fnameInput.value.trim();
-    const mname= mnameInput.value.trim();
-    const lname= lnameInput.value.trim();
-    const username= usernameInput.value.trim();
-    const email= emailInput.value.trim();
-    const password= passwordInput.value.trim();
-    const confirmPassword= confirmPasswordInput.value.trim();
-    const dob= dobInput.value.trim();
+        if(name===""){
+            resetBorder(input);
+            return;
+        }
+        const hasDigit=/\d/.test(name)
+        if(hasDigit){
+            showError(input,"Name Can't Have Digit");
+            return;
+        }
+        const hasSymbol = /[^a-zA-Z\s]/.test(name);
+        if (hasSymbol) {
+            showError(input, "Name cannot contain symbols");
+            return;
+        }
+        showSuccess(input);
+    });
+}
+addNameListener(fnameInput);
+addNameListener(lnameInput);
 
-    /*Calling Functions For validations */
-
-    const isFnameValid=validateName(fname);
-    const isMnameValid=validateName(mname);
-    const isLnameValid=validateName(lname);
-
-    const isUsernameValid=validateUsername(username);
-    const isEmailValid=validateEmail(email);
-    const isPasswordValid=validatePassword(password,confirmPassword);
-    const isDobValid=validateDob(dob);
-
-    if (isFnameValid && isLnameValid && isUsernameValid &&
-        isEmailValid && isPasswordValid && isDobValid) {
-        window.location.href = "./login.html";
+/*Validate Username*/
+usernameInput.addEventListener("input",function(){
+    const username=usernameInput.value.trim();
+    if(username===""){
+        resetBorder(usernameInput);
+        return;
     }
-
+    if(username.includes(" ")){
+        showError(usernameInput,"Username can't have blank space.");
+        return;
+    }
+    if(username.length<3){
+        showError(usernameInput,"Username must be alteast 3 character.");
+        return;
+    }
+    showSuccess(usernameInput);
 });
 
-function validateName(name, input){
-    if (name === "") {
-        showError(input, "Name is required");
+
+/*Validate Email realtime*/
+emailInput.addEventListener("input",function(){
+    const email=emailInput.value.trim();
+
+    if(email===""){
+        resetBorder(emailInput);
+        return;
+    }
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/ ;
+
+    if(!emailRegex.test(email)){
+        showError(emailInput,"Enter Valid Email");
+        return;
+    }
+    showSuccess(emailInput)
+});
+
+/*Validate Confirm Password match */
+confirmPasswordInput.addEventListener("input",function(){
+    const password=passwordInput.value.trim();
+    const confirmPassword=confirmPasswordInput.value.trim();
+
+    if(confirmPassword===""){
+        resetBorder(confirmPasswordInput);
+        return;
+    }
+
+    if(confirmPassword!==password){
+        showError(confirmPasswordInput,"Password doesn't match.");
+        return;
+    }
+    showSuccess(confirmPasswordInput);
+});
+
+/*Form Submit */
+signupForm.addEventListener("submit",function(event){
+    event.preventDefault();
+    /*Get values */
+    const fname=fnameInput.value.trim();
+    const lname=lnameInput.value.trim();
+    const username=usernameInput.value.trim();
+    const email=emailInput.value.trim();
+    const password=passwordInput.value.trim();
+    const confirmPassword = confirmPasswordInput.value.trim();
+    const dob=dobInput.value.trim();
+
+    /*Validation */
+
+    const isFnameValid=validateName(fname,fnameInput);
+    const isLnameValid=validateName(lname,lnameInput);
+    const isMnameValid = true;
+    const isUsernameValid = validateUsername(username);
+    const isEmailValid = validateEmail(email);
+    const isPasswordValid = validatePassword(password, confirmPassword);
+    const isDobValid = validateDob(dob);
+    if(isFnameValid && isLnameValid &&isMnameValid && isUsernameValid && isEmailValid && isPasswordValid && isDobValid){
+        window.location.href = "./login.html";
+    }
+});
+/*=========================
+On Submit Validation
+===========================*/
+/*Validate Name */
+function validateName(name,input){
+    if(name===""){
+        showError(input,"Name is required.");
         return false;
     }
-    if (name.length < 2) {
+    if(name.length<2){
         showError(input, "Name must be at least 2 characters");
         return false;
     }
     const namePattern = /^[a-zA-Z\s]+$/;
-
     if (!namePattern.test(name)) {
         showError(input, "Name can only contain letters");
         return false;
@@ -62,51 +145,89 @@ function validateName(name, input){
     return true;
 }
 
+/*Username validation */
 function validateUsername(username){
+    if(username===""){
+        showError(usernameInput,"Please Enter username.");
+        return false;
+    }
+
+    if(username.length<3){
+        showError(usernameInput,"Username must atleast be 3 character");
+        return false;
+    }
+    if(username.includes(" ")){
+        showError(usernameInput,"Username can't have blank space.");
+        return false;
+    }
+    showSuccess(usernameInput);
     return true;
 }
-
+/*Email Validation */
 function validateEmail(email){
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
-}
+    if(email===""){
+        showError(emailInput,"Email is required")
+        return false;
+    }
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/ ;
 
+    if(!emailRegex.test(email)){
+        showError(emailInput,"Enter Valid Email");
+        return false;
+    }
+    showSuccess(emailInput);
+    return true;
+}
+/*Password validation */
 function validatePassword(password,confirmPassword){
-    const minLength = 8;
+    if (password === "") {
+        showError(passwordInput, "Password is required");
+        return false;
+    }
+    if (password.length < 8) {
+        showError(passwordInput, "Password must be at least 8 characters");
+        return false;
+    }
     const hasNumber = /\d/.test(password);
-    
+    if (!hasNumber) {
+        showError(passwordInput, "Password must include at least one number");
+        return false;
+    }
+    if (confirmPassword === "") {
+        showError(confirmPasswordInput, "Please confirm your password");
+        return false;
+    }
     if (password !== confirmPassword) {
-        alert("Passwords do not match!");
+        showError(confirmPasswordInput, "Passwords do not match");
         return false;
     }
-    if (password.length < minLength || !hasNumber) {
-        alert("Password must be at least 8 characters and include a number.");
-        return false;
-    }
+    showSuccess(passwordInput);
+    showSuccess(confirmPasswordInput);
     return true;
 }
 
-function validateDob(dob){
+/*Validate dob */
+function validateDob(dob) {
+    if (dob === "") {
+        showError(dobInput, "Date of birth is required");
+        return false;
+    }
+    showSuccess(dobInput);
     return true;
 }
-
 
 /* Show Error */
 function showError(input, message) {
     const group = input.closest(".form-group");
-
     const existing = group.querySelector(".error-msg");
-    if (existing) {
-        existing.remove();
-    }
+    if (existing) existing.remove();
 
-    input.style.borderColor = "#dc2626";
+    input.style.borderColor = COLORS.errorColor;
 
     const error = document.createElement("p");
-
     error.className = "error-msg";
     error.textContent = message;
-    error.style.color = "#dc2626";
+    error.style.color = COLORS.errorColor;
     error.style.fontSize = "12px";
     error.style.marginTop = "4px";
     error.style.fontWeight = "500";
@@ -117,8 +238,13 @@ function showError(input, message) {
 function showSuccess(input) {
     const group = input.closest(".form-group");
     const existing = group.querySelector(".error-msg");
-    if (existing) {
-        existing.remove();
-    }
-    input.style.borderColor = "#16a34a";
+    if (existing) existing.remove();
+    input.style.borderColor = COLORS.successColor;
+}
+
+function resetBorder(input){
+    const group=input.closest(".form-group");
+    const existing = group.querySelector(".error-msg");
+    if (existing) existing.remove();
+    input.style.borderColor = COLORS.grayMid;
 }
