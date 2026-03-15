@@ -1,6 +1,25 @@
 const loginForm = document.querySelector(".login-box");
 const emailInput = document.querySelector("#email");
 const passwordInput = document.querySelector("#password");
+/*==========================
+Realtime Validation
+============================*/
+/*Email Validation*/
+emailInput.addEventListener("input",function(){
+    const email=emailInput.value.trim();
+
+    if(email===""){
+        resetBorder(emailInput);
+        return;
+    }
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/ ;
+
+    if(!emailRegex.test(email)){
+        showError(emailInput,"Enter Valid Email");
+        return;
+    }
+    showSuccess(emailInput)
+});
 
 loginForm.addEventListener("submit", function(event) {
     event.preventDefault();
