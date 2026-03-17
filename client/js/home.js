@@ -7,6 +7,8 @@ const searchBtn = document.querySelector(".search-bar button");
 const dropdown = document.querySelector(".search-dropdown");
 const productGrid = document.querySelector("#productgrid");
 const loadMore = document.querySelector(".btn-load-more");
+const categoryGrid=document.querySelector(".category-grid");
+
 
 let allProducts = [];
 let currentProducts = [];
@@ -123,4 +125,46 @@ loadMore.addEventListener("click", function() {
     currentLimit += additive;
     renderProducts(currentProducts);
     loadMore.scrollIntoView({ behavior: "smooth" });
+});
+
+
+/*================================
+Category Grid
+==================================*/
+
+let allCategories=[]
+fetch("../data/categories.json")
+    .then(function(response){
+        return response.json();
+    })
+    .then(function(category){
+        allCategories=category;
+        renderCategories(allCategories);
+    });
+
+//Render Category
+
+function renderCategories(categories){
+    if(categories.length === ""){
+        categoryGrid.innerHTML=`<p class=no-result>No Category Found</p>`;
+        return;
+    }
+    
+    categoryGrid.innerHTML=  categories.map(function(category){
+        return `
+            <div class="category-card" data-category="${category.category}">
+                <img src="${category.image}" alt="${category.name}">
+                <p>${category.name}</p>
+            </div>
+        `
+    }).join("");
+}
+//Category Click Event
+categoryGrid.addEventListener("click",function(event){
+    const clicked= event.target.closest(".category-card");
+    if(!clicked){
+        return;
+    }
+   const query= clicked.dataset.category;
+   window.location.href=`./products.html?category=${query}`
 });
