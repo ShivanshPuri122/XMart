@@ -73,6 +73,7 @@ main {
    PRODUCT CARD (shared)
 ================================ */
 .product-card {
+    position:relative;
     background-color: var(--white);
     border: 1px solid var(--gray-mid);
     border-radius: 4px;
@@ -133,13 +134,33 @@ main {
     text-transform: uppercase;
     cursor: pointer;
     transition: var(--transition);
-    margin-top: 12px;
+    width: 100%;
 }
 
 .add-to-cart:hover {
     background-color: var(--gray-dark);
 }
+.original-price {
+    font-size: var(--font-size-small);
+    color: var(--text-muted);
+    text-decoration: line-through;
+    font-weight: 500;
+}
 
+.product-badge {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--green);
+    text-transform: uppercase;
+}
+
+.product-pricing {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
 /* ================================
    LOAD MORE BUTTON (shared)
 ================================ */
@@ -166,7 +187,25 @@ main {
     opacity: 0.3;
     cursor: not-allowed;
 }
+/* ================================
+   PRODUCT RATING
+================================ */
+.product-rating {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
 
+.stars {
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.review-count {
+    font-size: var(--font-size-small);
+    color: var(--text-muted);
+    font-weight: 500;
+}
 /* ================================
    FOOTER
 ================================ */

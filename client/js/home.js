@@ -42,20 +42,10 @@ function renderProducts(products) {
         return;
     }
 
-    productGrid.innerHTML = products.slice(0, currentLimit).map(function(product) {
-        return `
-            <article class="product-card"
-                     data-name="${product.name.toLowerCase()}"
-                     data-category="${product.category}">
-                <img src="${product.image}" alt="${product.name}" />
-                <div class="product-info">
-                    <h3>${product.name}</h3>
-                    <p class="product-price">₹${product.price.toLocaleString("en-IN")}</p>
-                    <button class="add-to-cart">Add to Cart</button>
-                </div>
-            </article>
-        `;
-    }).join("");
+    productGrid.innerHTML = products
+    .slice(0, currentLimit)
+    .map(createProductCard)
+    .join("");
 
     if (products.length <= currentLimit) {
         loadMore.disabled = true;
