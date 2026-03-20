@@ -6,14 +6,13 @@ const checkboxgroup = document.querySelector(".checkbox-group");
 const resultsCount = document.querySelector(".results-count span");
 const minPriceInput = document.querySelector("#min-price");
 const maxPriceInput = document.querySelector("#max-price");
-const selectedRating = document.querySelector(".rating-group input:checked");
 
 let allProducts = [];
 let originalProducts=[];
 let allCategories = [];
 let currentProducts = [];
-let currentLimit = 6;
-const additive = 6;
+let currentLimit = 8;
+const additive = 8;
 //Filter
 //CheckBox
 //fetch category from categories.json
@@ -111,9 +110,7 @@ fetch("../data/products.json")
 function renderProducts(products) {
     currentProducts = products;
 
-    // update results count in topbar
     resultsCount.textContent = products.length;
-    // ← shows "Showing X products" dynamically
 
     if (products.length === 0) {
         productGrid.innerHTML = `<p class="no-results">No products found.</p>`;
@@ -121,24 +118,10 @@ function renderProducts(products) {
         return;
     }
 
-    productGrid.innerHTML = products.slice(0, currentLimit).map(function(product) {
-        return `
-            <article class="product-card"
-                data-name="${product.name.toLowerCase()}"
-                data-category="${product.category}">
-                <img src="${product.image}" alt="${product.name}" />
-                <div class="product-info">
-                <h3>${product.name}</h3>
-
-                <div class="product-rating">
-                    <span class="stars">${getStars(product.rating)}</span>
-                    <span class="review-count">(${product.reviews})</span>
-                </div>
-                <p class="product-price">₹${product.price.toLocaleString("en-IN")}</p>
-                <button class="add-to-cart">Add to Cart</button>
-            </article>
-        `;
-    }).join("");
+    productGrid.innerHTML = products
+    .slice(0, currentLimit)
+    .map(createProductCard)
+    .join("");
 
     if (products.length <= currentLimit) {
         loadMoreBtn.disabled = true;
@@ -153,22 +136,8 @@ loadMoreBtn.addEventListener("click", function() {
     renderProducts(currentProducts);
     loadMoreBtn.scrollIntoView({ behavior: "smooth" });
 });
-//Rating Helper function
-
-function getStars(rating) {
-    const full = Math.floor(rating);
-    const half = rating % 1 >= 0.5 ? 1 : 0;
-    const empty = 5 - full - half;
-    // remaining empty stars to make 5 total
-
-    return "⭐".repeat(full) + (half ? "✨" : "") + "☆".repeat(empty);
-
-}
-
-
 
 //Sort Feature
-
 const sortType=document.querySelector("#sort");
 
 sortType.addEventListener("change",function(){
