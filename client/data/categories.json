@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "name": "Electronics",
+        "category": "electronics",
+        "image": "../assets/images/categories/electronics.webp",
+        "icon": "📱"
+    },
+    {
+        "id": 2,
+        "name": "Clothing",
+        "category": "clothing",
+        "image": "../assets/images/categories/clothing.webp",
+        "icon": "👕"
+    },
+    {
+        "id": 3,
+        "name": "Books",
+        "category": "books",
+        "image": "../assets/images/categories/books.webp",
+        "icon": "📚"
+    },
+    {
+        "id": 4,
+        "name": "Sports",
+        "category": "sports",
+        "image": "../assets/images/categories/sports.webp",
+        "icon": "⚽"
+    },
+    {
+        "id": 5,
+        "name": "Home & Kitchen",
+        "category": "home-kitchen",
+        "image": "../assets/images/categories/home-kitchen.webp",
+        "icon": "🏠"
+    },
+    {
+        "id": 6,
+        "name": "Beauty",
+        "category": "beauty",
+        "image": "../assets/images/categories/beauty.webp",
+        "icon": "💄"
+    }
+]
