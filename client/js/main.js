@@ -91,5 +91,11 @@ function updateCartCount() {
     if (!cartCount) return;
     cartCount.textContent = cart.length;
 }
-
 updateCartCount();
+
+/* ================================
+   CAPITALIZE
+================================ */
+function capitalize(str) {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+}
