@@ -3,144 +3,288 @@
         "id": 1,
         "name": "Wireless Headphones",
         "category": "electronics",
+        "brand": "SoundMax",
+        "sku": "SM-WH-001",
         "price": 2999,
         "originalPrice": 4999,
         "rating": 4.5,
         "reviews": 128,
         "image": "../assets/images/products/headphones.webp",
         "badge": "40% OFF",
-        "featured": true
+        "featured": true,
+        "inStock": true,
+        "description": "Experience premium sound quality with active noise cancellation. Up to 30 hours of battery life, foldable design, and crystal clear calls with built-in microphone. Compatible with all Bluetooth devices.",
+        "specs": {
+            "Battery Life": "30 Hours",
+            "Connectivity": "Bluetooth 5.0",
+            "Driver Size": "40mm",
+            "Weight": "250g",
+            "Warranty": "1 Year",
+            "Color": "Matte Black"
+        }
     },
     {
         "id": 2,
         "name": "Running Shoes",
         "category": "sports",
+        "brand": "SwiftStep",
+        "sku": "SS-RS-002",
         "price": 1499,
         "originalPrice": 1499,
         "rating": 4.2,
         "reviews": 84,
         "image": "../assets/images/products/shoes.webp",
         "badge": null,
-        "featured": true
+        "featured": true,
+        "inStock": true,
+        "description": "Lightweight and breathable running shoes designed for maximum comfort and performance. Features advanced cushioning technology and durable outsole for all terrain running.",
+        "specs": {
+            "Material": "Mesh Upper",
+            "Sole": "Rubber Outsole",
+            "Closure": "Lace Up",
+            "Weight": "280g",
+            "Warranty": "6 Months",
+            "Available Sizes": "6 to 11"
+        }
     },
     {
         "id": 3,
         "name": "Leather Wallet",
         "category": "clothing",
+        "brand": "LuxLeather",
+        "sku": "LL-WL-003",
         "price": 799,
         "originalPrice": 799,
         "rating": 4.0,
         "reviews": 56,
         "image": "../assets/images/products/wallet.webp",
         "badge": null,
-        "featured": true
+        "featured": true,
+        "inStock": true,
+        "description": "Handcrafted genuine leather wallet with multiple card slots and a sleek minimalist design. RFID blocking technology keeps your cards safe from digital theft.",
+        "specs": {
+            "Material": "Genuine Leather",
+            "Card Slots": "8 Slots",
+            "RFID Blocking": "Yes",
+            "Weight": "60g",
+            "Warranty": "1 Year",
+            "Color": "Brown"
+        }
     },
     {
         "id": 4,
         "name": "Smart Watch",
         "category": "electronics",
+        "brand": "TimeTech",
+        "sku": "TT-SW-004",
         "price": 4999,
         "originalPrice": 7999,
         "rating": 4.7,
         "reviews": 203,
         "image": "../assets/images/products/watch.webp",
         "badge": "37% OFF",
-        "featured": true
+        "featured": true,
+        "inStock": true,
+        "description": "Feature packed smartwatch with health monitoring, GPS tracking and 7 day battery life. Water resistant up to 50 meters with over 100 workout modes and real time notifications.",
+        "specs": {
+            "Battery Life": "7 Days",
+            "Water Resistance": "50 Meters",
+            "Display": "1.4 inch AMOLED",
+            "Weight": "45g",
+            "Warranty": "1 Year",
+            "Connectivity": "Bluetooth 5.0"
+        }
     },
     {
         "id": 5,
         "name": "Yoga Mat",
         "category": "sports",
+        "brand": "FlexFit",
+        "sku": "FF-YM-005",
         "price": 599,
         "originalPrice": 599,
         "rating": 4.1,
         "reviews": 42,
         "image": "../assets/images/products/yogamat.webp",
         "badge": null,
-        "featured": true
+        "featured": true,
+        "inStock": true,
+        "description": "Premium non-slip yoga mat made from eco-friendly TPE material. Extra thick 6mm cushioning provides joint protection and comfort during all types of yoga and exercise.",
+        "specs": {
+            "Material": "TPE",
+            "Thickness": "6mm",
+            "Dimensions": "183 x 61 cm",
+            "Weight": "900g",
+            "Warranty": "6 Months",
+            "Color": "Purple"
+        }
     },
     {
         "id": 6,
         "name": "Coffee Maker Machine",
         "category": "home-kitchen",
+        "brand": "BrewMaster",
+        "sku": "BM-CM-006",
         "price": 4899,
         "originalPrice": 6999,
         "rating": 4.4,
         "reviews": 91,
         "image": "../assets/images/products/coffeemachine.webp",
         "badge": "30% OFF",
-        "featured": true
+        "featured": true,
+        "inStock": true,
+        "description": "Automatic drip coffee maker with built-in grinder and programmable timer. Brews up to 12 cups with adjustable brew strength and keep warm function for up to 2 hours.",
+        "specs": {
+            "Capacity": "12 Cups",
+            "Power": "1000W",
+            "Timer": "Programmable",
+            "Warranty": "2 Years",
+            "Color": "Stainless Steel",
+            "Dimensions": "30 x 20 x 35 cm"
+        }
     },
     {
         "id": 7,
         "name": "Face Moisturizer",
         "category": "beauty",
+        "brand": "GlowSkin",
+        "sku": "GS-FM-007",
         "price": 499,
         "originalPrice": 499,
         "rating": 4.3,
         "reviews": 67,
         "image": "../assets/images/products/moisturizer.webp",
         "badge": null,
-        "featured": true
+        "featured": true,
+        "inStock": true,
+        "description": "Lightweight daily moisturizer with hyaluronic acid and vitamin C for deep hydration and brightening. Suitable for all skin types, dermatologist tested and non comedogenic.",
+        "specs": {
+            "Volume": "50ml",
+            "Skin Type": "All Types",
+            "Key Ingredients": "Hyaluronic Acid, Vitamin C",
+            "SPF": "SPF 30",
+            "Warranty": "NA",
+            "Fragrance": "Fragrance Free"
+        }
     },
     {
         "id": 8,
         "name": "Python Book",
         "category": "books",
+        "brand": "TechPress",
+        "sku": "TP-PB-008",
         "price": 999,
         "originalPrice": 999,
         "rating": 4.8,
         "reviews": 312,
         "image": "../assets/images/products/pythonbook.webp",
         "badge": null,
-        "featured": true
+        "featured": true,
+        "inStock": true,
+        "description": "Comprehensive Python programming guide for beginners to advanced developers. Covers data structures, algorithms, web development, data science and real world projects with hands on examples.",
+        "specs": {
+            "Pages": "650",
+            "Language": "English",
+            "Edition": "3rd Edition",
+            "Publisher": "TechPress",
+            "ISBN": "978-0-000-00000-0",
+            "Format": "Paperback"
+        }
     },
     {
         "id": 9,
         "name": "Bluetooth Speaker",
         "category": "electronics",
+        "brand": "SoundMax",
+        "sku": "SM-BS-009",
         "price": 1999,
         "originalPrice": 2999,
         "rating": 4.3,
         "reviews": 156,
         "image": "../assets/images/products/bluetoothspeaker.webp",
         "badge": "33% OFF",
-        "featured": false
+        "featured": true,
+        "inStock": true,
+        "description": "Portable waterproof Bluetooth speaker with 360 degree surround sound and deep bass. 20 hour playtime, built in microphone for hands free calls and USB C fast charging.",
+        "specs": {
+            "Battery Life": "20 Hours",
+            "Connectivity": "Bluetooth 5.0",
+            "Water Resistance": "IPX7",
+            "Weight": "500g",
+            "Warranty": "1 Year",
+            "Color": "Midnight Black"
+        }
     },
     {
         "id": 10,
         "name": "Dumbbell Set",
         "category": "sports",
+        "brand": "IronForce",
+        "sku": "IF-DS-010",
         "price": 2499,
         "originalPrice": 2499,
         "rating": 4.5,
         "reviews": 78,
-        "image": "../assets/images/products/dumbbellset.webp",
+        "image": "../assets/images/products/dumbellset.webp",
         "badge": null,
-        "featured": false
+        "featured": true,
+        "inStock": true,
+        "description": "Adjustable dumbbell set with anti-slip rubber grip and chrome finish. Includes 2 dumbbells with weight plates ranging from 2kg to 10kg each, perfect for home workouts.",
+        "specs": {
+            "Weight Range": "2kg to 10kg",
+            "Material": "Cast Iron",
+            "Grip": "Anti-slip Rubber",
+            "Set Includes": "2 Dumbbells",
+            "Warranty": "1 Year",
+            "Finish": "Chrome"
+        }
     },
     {
         "id": 11,
         "name": "Sunscreen SPF50",
         "category": "beauty",
+        "brand": "GlowSkin",
+        "sku": "GS-SS-011",
         "price": 349,
         "originalPrice": 349,
         "rating": 4.2,
         "reviews": 189,
         "image": "../assets/images/products/sunscreen.webp",
         "badge": null,
-        "featured": false
+        "featured": true,
+        "inStock": true,
+        "description": "Broad spectrum SPF50 sunscreen with lightweight non-greasy formula. Provides UVA and UVB protection, water resistant for up to 80 minutes and enriched with antioxidants.",
+        "specs": {
+            "SPF": "SPF 50",
+            "Volume": "100ml",
+            "Skin Type": "All Types",
+            "Water Resistant": "80 Minutes",
+            "Warranty": "NA",
+            "Fragrance": "Light Citrus"
+        }
     },
     {
         "id": 12,
         "name": "Cricket Bat",
         "category": "sports",
+        "brand": "StrikeZone",
+        "sku": "SZ-CB-012",
         "price": 1299,
         "originalPrice": 1999,
         "rating": 4.6,
         "reviews": 245,
         "image": "../assets/images/products/cricketbat.webp",
         "badge": "33% OFF",
-        "featured": false
+        "featured": true,
+        "inStock": true,
+        "description": "Professional grade English willow cricket bat with premium grip and balanced weight distribution. Ideal for both practice and professional matches with excellent stroke play.",
+        "specs": {
+            "Material": "English Willow",
+            "Weight": "1.2kg",
+            "Handle": "Cane Handle",
+            "Grade": "Grade 1",
+            "Warranty": "6 Months",
+            "Size": "Full Size"
+        }
     }
 ]
