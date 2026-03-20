@@ -14,6 +14,7 @@
         "featured": true,
         "inStock": true,
         "description": "Experience premium sound quality with active noise cancellation. Up to 30 hours of battery life, foldable design, and crystal clear calls with built-in microphone. Compatible with all Bluetooth devices.",
+        "longDescription": "These wireless headphones deliver an immersive audio experience with advanced active noise cancellation technology. Whether you are commuting, working, or relaxing, enjoy your music without distractions. The ergonomic design ensures comfort during extended wear, while the premium 40mm drivers produce rich, detailed sound across all frequencies. The foldable design makes it easy to carry anywhere.",
         "specs": {
             "Battery Life": "30 Hours",
             "Connectivity": "Bluetooth 5.0",
@@ -38,6 +39,7 @@
         "featured": true,
         "inStock": true,
         "description": "Lightweight and breathable running shoes designed for maximum comfort and performance. Features advanced cushioning technology and durable outsole for all terrain running.",
+        "longDescription": "Engineered for serious runners, these shoes combine cutting edge cushioning technology with a breathable mesh upper for maximum comfort and performance. The advanced rubber outsole provides superior grip on all terrains while the reinforced toe cap ensures durability. Whether training for a marathon or a casual jog, these shoes deliver consistent performance mile after mile.",
         "specs": {
             "Material": "Mesh Upper",
             "Sole": "Rubber Outsole",
@@ -62,6 +64,7 @@
         "featured": true,
         "inStock": true,
         "description": "Handcrafted genuine leather wallet with multiple card slots and a sleek minimalist design. RFID blocking technology keeps your cards safe from digital theft.",
+        "longDescription": "Crafted from premium full grain leather, this wallet develops a rich patina over time making it truly unique. The slim profile fits comfortably in any pocket while offering generous storage for cards and cash. The RFID blocking layer uses military grade shielding technology to protect your contactless cards from unauthorized scanning.",
         "specs": {
             "Material": "Genuine Leather",
             "Card Slots": "8 Slots",
@@ -86,6 +89,7 @@
         "featured": true,
         "inStock": true,
         "description": "Feature packed smartwatch with health monitoring, GPS tracking and 7 day battery life. Water resistant up to 50 meters with over 100 workout modes and real time notifications.",
+        "longDescription": "This smartwatch seamlessly blends style with cutting edge technology. The always on AMOLED display delivers vibrant colors even in direct sunlight. Advanced health sensors continuously monitor your heart rate, blood oxygen levels and stress. Built in GPS accurately tracks your outdoor activities without needing your phone nearby.",
         "specs": {
             "Battery Life": "7 Days",
             "Water Resistance": "50 Meters",
@@ -110,6 +114,7 @@
         "featured": true,
         "inStock": true,
         "description": "Premium non-slip yoga mat made from eco-friendly TPE material. Extra thick 6mm cushioning provides joint protection and comfort during all types of yoga and exercise.",
+        "longDescription": "Designed for yogis of all levels, this mat provides the perfect balance of cushioning and stability. The closed cell surface prevents sweat and bacteria absorption keeping your mat hygienic. The alignment lines help beginners maintain proper form while the non slip texture ensures safety during challenging poses.",
         "specs": {
             "Material": "TPE",
             "Thickness": "6mm",
@@ -134,6 +139,7 @@
         "featured": true,
         "inStock": true,
         "description": "Automatic drip coffee maker with built-in grinder and programmable timer. Brews up to 12 cups with adjustable brew strength and keep warm function for up to 2 hours.",
+        "longDescription": "Transform your morning routine with this professional grade coffee maker. The built in conical burr grinder preserves the full flavor profile of your beans while the precision temperature control ensures optimal extraction every time. The thermal carafe keeps your coffee hot for hours without burning it on a hot plate.",
         "specs": {
             "Capacity": "12 Cups",
             "Power": "1000W",
@@ -158,6 +164,7 @@
         "featured": true,
         "inStock": true,
         "description": "Lightweight daily moisturizer with hyaluronic acid and vitamin C for deep hydration and brightening. Suitable for all skin types, dermatologist tested and non comedogenic.",
+        "longDescription": "Developed by dermatologists, this moisturizer uses a breakthrough formula that mimics your skin natural hydration process. The multi molecular hyaluronic acid penetrates multiple layers of skin for deep lasting hydration. Vitamin C brightens dark spots while niacinamide minimizes pores and controls excess oil production.",
         "specs": {
             "Volume": "50ml",
             "Skin Type": "All Types",
@@ -182,6 +189,7 @@
         "featured": true,
         "inStock": true,
         "description": "Comprehensive Python programming guide for beginners to advanced developers. Covers data structures, algorithms, web development, data science and real world projects with hands on examples.",
+        "longDescription": "Written by industry veterans with decades of experience, this comprehensive guide takes you from Python basics to advanced concepts used in real world applications. Each chapter includes hands on projects, coding challenges and best practices used at top tech companies. The third edition has been completely updated to cover Python 3.11 and modern libraries.",
         "specs": {
             "Pages": "650",
             "Language": "English",
@@ -206,6 +214,7 @@
         "featured": true,
         "inStock": true,
         "description": "Portable waterproof Bluetooth speaker with 360 degree surround sound and deep bass. 20 hour playtime, built in microphone for hands free calls and USB C fast charging.",
+        "longDescription": "Engineered for audiophiles who refuse to compromise on sound quality, this speaker uses dual passive radiators and a precisely tuned port to deliver thunderous bass. The 360 degree sound dispersion fills any room with rich immersive audio. The rugged IPX7 waterproof housing means it can survive splashes, rain and even brief submersion.",
         "specs": {
             "Battery Life": "20 Hours",
             "Connectivity": "Bluetooth 5.0",
@@ -230,6 +239,7 @@
         "featured": true,
         "inStock": true,
         "description": "Adjustable dumbbell set with anti-slip rubber grip and chrome finish. Includes 2 dumbbells with weight plates ranging from 2kg to 10kg each, perfect for home workouts.",
+        "longDescription": "Built for serious fitness enthusiasts, these dumbbells feature precision cast iron construction with a chrome finish that resists rust and corrosion. The knurled handle provides a secure grip even during intense sweaty workouts. The compact design takes up minimal space making them perfect for home gyms.",
         "specs": {
             "Weight Range": "2kg to 10kg",
             "Material": "Cast Iron",
@@ -254,6 +264,7 @@
         "featured": true,
         "inStock": true,
         "description": "Broad spectrum SPF50 sunscreen with lightweight non-greasy formula. Provides UVA and UVB protection, water resistant for up to 80 minutes and enriched with antioxidants.",
+        "longDescription": "Formulated with next generation UV filters, this sunscreen provides superior broad spectrum protection without the white cast or greasy feel of traditional sunscreens. The lightweight gel cream texture absorbs instantly and works perfectly as a makeup base. Enriched with antioxidants including vitamin E and green tea extract to fight free radical damage.",
         "specs": {
             "SPF": "SPF 50",
             "Volume": "100ml",
@@ -278,6 +289,7 @@
         "featured": true,
         "inStock": true,
         "description": "Professional grade English willow cricket bat with premium grip and balanced weight distribution. Ideal for both practice and professional matches with excellent stroke play.",
+        "longDescription": "Hand crafted by master bat makers with over 50 years of experience, this bat is pressed to the perfect hardness for optimal performance. The premium English willow is carefully selected for straight grain and minimal blemishes ensuring consistent stroke play. The traditional cane handle with triple spring insert absorbs vibration reducing hand fatigue during long innings.",
         "specs": {
             "Material": "English Willow",
             "Weight": "1.2kg",
