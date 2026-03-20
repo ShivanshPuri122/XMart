@@ -4,7 +4,8 @@ const loadMoreBtn = document.querySelector(".btn-load-more");
 const applyFiltersBtn = document.querySelector(".btn-apply-filters");
 const checkboxgroup = document.querySelector(".checkbox-group");
 const resultsCount = document.querySelector(".results-count span");
-const priceRange=document.querySelector(".price-range");
+const minPriceInput = document.querySelector("#min-price");
+const maxPriceInput = document.querySelector("#max-price");
 
 let allProducts = [];
 let originalProducts=[];
@@ -44,16 +45,23 @@ function renderCategories(categories){
 //Apply Filter Buton
 applyFiltersBtn.addEventListener("click",function(){
     currentLimit=6;
+    const min = Number(minPriceInput.value) || 0;
+    const max = Number(maxPriceInput.value) || Infinity;
     const checked = document.querySelectorAll(".checkbox-group input:checked");
     const selectedCategories = Array.from(checked).map(function(input){
         return input.value;
     });
     if (selectedCategories.length === 0) {
-        renderProducts(allProducts);
+        const filtered = allProducts.filter(function(p) {
+            return p.price >= min && p.price <= max;
+        });
+        renderProducts(filtered);
         return;
     }
     const filtered = allProducts.filter(function(p) {
-        return selectedCategories.includes(p.category);
+        return selectedCategories.includes(p.category) &&
+               p.price >= min &&
+               p.price <= max;
     });
     renderProducts(filtered);
 });
