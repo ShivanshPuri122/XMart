@@ -99,3 +99,72 @@ updateCartCount();
 function capitalize(str) {
     return str.charAt(0).toUpperCase() + str.slice(1);
 }
+/*==============================
+    Add To Cart
+===============================*/    
+function addToCart(product, quantity) {
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    const existing = cart.find(function(item) {
+        return item.id === product.id;
+    });
+
+    if (existing) {
+        existing.quantity += quantity;
+    } else {
+        cart.push({
+            id: product.id,
+            name: product.name,
+            price: product.price,
+            image: product.image,
+            quantity: quantity
+        });
+    }
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+    updateCartCount();
+    showCartFeedback(product.name);
+}
+//Cart Event Listener
+document.addEventListener("click", function(event) {
+    const card = event.target.closest(".product-card");
+    if (!card) return;
+
+    // add to cart button clicked
+    if (event.target.classList.contains("add-to-cart")) {
+        const productId = Number(card.dataset.id);
+
+        // need product data — fetch it
+        fetch("../data/products.json")
+            .then(r => r.json())
+            .then(function(products) {
+                const product = products.find(p => p.id === productId);
+                if (product) addToCart(product, 1);
+                // add 1 item when clicked from card
+            });
+        return;
+        // stop here — don't redirect to detail page
+    }
+
+    // card clicked but not add to cart button
+    const productId = card.dataset.id;
+    window.location.href = `./product-detail.html?id=${productId}`;
+});
+/* ================================
+   CART FEEDBACK
+================================ */
+function showCartFeedback(productName) {
+    // create toast notification
+    const toast = document.createElement("div");
+    toast.className = "cart-toast";
+    toast.textContent = `${productName} added to cart!`;
+    // better than alert() ✅
+
+    document.body.appendChild(toast);
+    // add to page
+
+    setTimeout(function() {
+        toast.remove();
+        // remove after 2 seconds
+    }, 2000);
+}
