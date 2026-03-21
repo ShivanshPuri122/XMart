@@ -133,38 +133,9 @@ const buyNowBtn = document.querySelector(".btn-buy-now");
 
 addToCartBtn.addEventListener("click", function() {
     const quantity = Number(qtyInput.value);
-
-    // build cart item object
-    const cartItem = {
-        id: currentProductproduct.id,
-        name: currentProductproduct.name,
-        price: currentProductproduct.price,
-        image: currentProductproduct.image,
-        quantity: quantity
-    };
-
-    const cart = JSON.parse(localStorage.getItem("cart")) || [];
-
-    const existing = cart.find(function(item) {
-        return item.id === product.id;
-    });
-    if (existing) {
-        existing.quantity += quantity;
-        // if already in cart — just increase quantity
-    } else {
-        cart.push(cartItem);
-        // if not in cart — add new item
-    }
-
-    // save updated cart back to localStorage
-    localStorage.setItem("cart", JSON.stringify(cart));
-
-    updateCartCount();
-    // update cart count in navbar
-
-    alert(`${product.name} added to cart!`);
-    // temporary feedback — will improve later
+    addToCart(currentProduct, quantity);
 });
+
 buyNowBtn.addEventListener("click", function() {
     // add to cart first
     addToCartBtn.click();
