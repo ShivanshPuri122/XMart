@@ -7,7 +7,6 @@ const subtotalEl = document.querySelector(".summary-rows .summary-row:first-chil
 const totalEl = document.querySelector(".summary-total span:last-child");
 const discountEl = document.querySelector(".discount-amount");
 const orderSummary = document.querySelector(".order-summary");
-
 let discount = 0;
 
 /* ================================
@@ -94,6 +93,11 @@ function renderCartItems(cart) {
    CART ITEM CLICKS
 ================================ */
 cartItemsContainer.addEventListener("click", function(event) {
+    if (event.target.classList.contains("btn-clear")) {
+        localStorage.removeItem("cart");
+        loadCart();
+        updateCartCount();
+    }
     const cartItem = event.target.closest(".cart-item");
     if (!cartItem) return;
 
@@ -110,11 +114,7 @@ cartItemsContainer.addEventListener("click", function(event) {
     }
 
     // clear cart button
-    if (event.target.classList.contains("btn-clear")) {
-        localStorage.removeItem("cart");
-        loadCart();
-        updateCartCount();
-    }
+    
 });
 
 /* ================================
