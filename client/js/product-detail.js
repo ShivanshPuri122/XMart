@@ -5,6 +5,7 @@ const breadcrumb = document.querySelector(".breadcrumb .container");
 
 const params = new URLSearchParams(window.location.search);
 const productId =Number(params.get("id"));
+let currentProduct = null;
 
 fetch("../data/products.json")
     .then(function(response){
@@ -18,6 +19,7 @@ fetch("../data/products.json")
             window.location.href="./products.html";
             return;
         }
+        currentProduct = product;
         const related = products.filter(function(p) {
         return p.category === product.category && p.id !== product.id;
         });
@@ -102,3 +104,87 @@ function renderProduct(product){
     `;
 }
 
+/* ================================
+   QUANTITY BUTTONS
+================================ */
+const qtyMinus = document.querySelector("#qtyMinus");
+const qtyPlus = document.querySelector("#qtyPlus");
+const qtyInput = document.querySelector("#quantity");
+
+qtyMinus.addEventListener("click", function() {
+    let current = Number(qtyInput.value);
+    if (current > 1) {
+        qtyInput.value = current - 1;
+    }
+});
+
+qtyPlus.addEventListener("click", function() {
+    let current = Number(qtyInput.value);
+    if (current < 10) {
+        qtyInput.value = current + 1;
+    }
+});
+
+/* ================================
+   ADD TO CART
+================================ */
+const addToCartBtn = document.querySelector(".btn-add-to-cart");
+const buyNowBtn = document.querySelector(".btn-buy-now");
+
+addToCartBtn.addEventListener("click", function() {
+    const quantity = Number(qtyInput.value);
+
+    // build cart item object
+    const cartItem = {
+        id: currentProductproduct.id,
+        name: currentProductproduct.name,
+        price: currentProductproduct.price,
+        image: currentProductproduct.image,
+        quantity: quantity
+    };
+
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    const existing = cart.find(function(item) {
+        return item.id === product.id;
+    });
+    if (existing) {
+        existing.quantity += quantity;
+        // if already in cart — just increase quantity
+    } else {
+        cart.push(cartItem);
+        // if not in cart — add new item
+    }
+
+    // save updated cart back to localStorage
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    updateCartCount();
+    // update cart count in navbar
+
+    alert(`${product.name} added to cart!`);
+    // temporary feedback — will improve later
+});
+buyNowBtn.addEventListener("click", function() {
+    // add to cart first
+    addToCartBtn.click();
+    // then redirect to cart
+    window.location.href = "./cart.html";
+});
+
+/* ================================
+   Related Products
+================================ */
+
+function renderRelatedProducts(related){
+    const relatedGrid = document.querySelector(".related-products .product-grid");
+    const relatedSection = document.querySelector(".related-products");
+    if(related.length===0){
+        relatedSection.style.display="none";
+        return;
+    }
+    relatedGrid.innerHTML = related
+    .slice(0, 4)
+    .map(createProductCard)
+    .join("");
+}
