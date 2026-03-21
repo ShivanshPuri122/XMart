@@ -28,12 +28,10 @@ function loadCart() {
         `;
         cartHeaderCount.textContent = "0 items in your cart";
         orderSummary.style.display = "none";
-        // ↑ hide order summary when empty
         return;
     }
 
     orderSummary.style.display = "block";
-    // ↑ show when items exist
     cartHeaderCount.textContent = `${cart.length} items in your cart`;
     renderCartItems(cart);
     updateTotals(cart);
