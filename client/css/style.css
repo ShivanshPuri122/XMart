@@ -311,3 +311,34 @@ input[type="number"]::-webkit-outer-spin-button {
 input[type="number"] {
     -moz-appearance: textfield;
 }
+
+/* ================================
+   CART TOAST
+================================ */
+.cart-toast {
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    background-color: var(--black);
+    color: var(--white);
+    padding: 14px 24px;
+    border-radius: 4px;
+    font-size: var(--font-size-small);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    z-index: 9999;
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+        /* starts below and invisible */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        /* slides up to final position */
+    }
+}
